@@ -22,6 +22,8 @@ public class Main5 {
         System.out.println("Полученный массив:");
         System.out.println("Полученный массив:");
         System.out.println("Полученный массив:");
+        System.out.println("Полученный массив:");
+        System.out.println("Полученный массив:");
         for (int[] row : a) {
             for (int element : row) {
                 element += n;
