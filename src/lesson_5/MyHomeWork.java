@@ -1,8 +1,10 @@
 package lesson_5;
 
+import java.util.Scanner;
+
 public class MyHomeWork {
     public static void main(String[] args) {
-        System.out.println("My home 103");
+        Scanner scanner = new Scanner(System.in);
         System.out.println("My home 5 from new branch");
     }
 }
