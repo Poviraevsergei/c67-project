@@ -13,6 +13,7 @@ public class Main5 {
             for (int element : row) {
                 element += n;
                 System.out.println(element);
+                System.out.println(element);
             }
         }
 
