@@ -3,6 +3,11 @@ package lesson_6;
 public class Person {
     String fullName;
     int age;
+    private String name = "Alex";
+
+    public String getName() {
+        return name;
+    }
 
     public Person() {
     }
