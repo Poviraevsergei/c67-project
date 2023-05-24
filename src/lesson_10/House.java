@@ -30,4 +30,16 @@ public class House {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        House house = (House) o;
+        return cost == house.cost && Objects.equals(color, house.color);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(cost, color);
+    }
 }
