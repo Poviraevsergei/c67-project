@@ -1,5 +1,6 @@
 package lesson_10;
 
+import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
@@ -33,5 +34,16 @@ public class Main {
 
         System.out.println(house.getDog().getName());
         System.out.println(newHouse.getDog().getName());
+
+        //getClass методанные класса. Рефлексия.
+        Class metaInfo = house.getClass();
+
+        Class[] interfaces = metaInfo.getInterfaces();
+
+        for (Class classInterface : interfaces) {
+            System.out.println(classInterface.getName());
+        } //Iterator
+
+        System.out.println(new Date().getTime());
     }
 }

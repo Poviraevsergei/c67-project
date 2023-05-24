@@ -1,5 +1,6 @@
 package lesson_10;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 public class House implements Cloneable {
@@ -49,5 +50,10 @@ public class House implements Cloneable {
         House house = (House) super.clone();
         house.dog = (Dog) dog.clone();
         return house;
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("I will delete this object !");
     }
 }
