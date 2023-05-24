@@ -3,20 +3,35 @@ package lesson_10;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
-//toString() - преобразовать обьект в строку
+    public static void main(String[] args) throws CloneNotSupportedException {
+        //toString() - преобразовать обьект в строку
 
         House house = new House();
         house.setCost(1000_000);
         house.setColor("White");
+        house.setDog(new Dog());
+        house.getDog().setName("Misha");
 
-        House secondHouse = new House();
-        house.setCost(1);
-        house.setColor("Black");
+        House house1 = new House();
+        house1.setCost(1000_000);
+        house1.setColor("White");
 
-        System.out.println(house.hashCode());
-        System.out.println(secondHouse.hashCode());
+        //equals о умолчанию сравнивает ссылки обьектов(НЕ ПО ПОЛЯМ).
+        System.out.println(house == house1);
+        System.out.println(house.equals(house1));
 
-        //Коллизия
+        //equals переопределенный сравнивает значения палей объекта
+        //equals & hashCode контракт.
+
+
+        //Clone (глубокое клонирование)
+        House newHouse = (House) house.clone(); //Object -> House
+        System.out.println(house.getDog().getName());
+        System.out.println(newHouse.getDog().getName());
+
+        newHouse.getDog().setName("Dima");
+
+        System.out.println(house.getDog().getName());
+        System.out.println(newHouse.getDog().getName());
     }
 }
