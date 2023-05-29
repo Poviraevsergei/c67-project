@@ -1,5 +1,7 @@
 package lesson_10;
 
+import java.util.Objects;
+
 public class Dog implements Cloneable {
     private String name;
 
@@ -14,5 +16,18 @@ public class Dog implements Cloneable {
     @Override
     protected Object clone() throws CloneNotSupportedException {
         return super.clone();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Dog dog = (Dog) o;
+        return Objects.equals(name, dog.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
     }
 }

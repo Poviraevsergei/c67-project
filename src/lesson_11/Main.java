@@ -30,13 +30,25 @@ public class Main {
         //System.out.println("   ".isBlank()); //не учитывает пробелы
         //System.out.println(line.repeat(3)); //повторяет строку n раз
         //System.out.println(line.intern()); //перекладывает обьект из Heap в String pool
-        //String six = String.valueOf(true); //"true"
+        //String six = String.valueOf(6); //"6"
+        //String seven = String.valueOf(7); //"7"
+        //System.out.println(six + seven);
 
-        String block = """
-                Hello world!
-                How are you??
-                """;
+        //String block = """
+        //        Hello world!
+        //        How are you??
+        //        """;
 
-        System.out.println("asdasd " + 234); //"asdasd234"
+        StringBuilder strBuildLine = new StringBuilder("Hello world!");
+        strBuildLine.append("This is end of line!"); //добавить в конец
+        strBuildLine.delete(4, 7); //удалить
+        strBuildLine.deleteCharAt(4); //удалить 1 символ
+        strBuildLine.insert(3, "BYE"); //вставить в середину
+        strBuildLine.reverse();
+        String lineFromSB = strBuildLine.toString();
+        System.out.println(strBuildLine);
+
+        //StringBuffer используется в многопоточной среде
+        StringBuffer strBuffLine = new StringBuffer("Hello world!");
     }
 }
