@@ -39,16 +39,20 @@ public class Main {
         //        How are you??
         //        """;
 
-        StringBuilder strBuildLine = new StringBuilder("Hello world!");
-        strBuildLine.append("This is end of line!"); //добавить в конец
-        strBuildLine.delete(4, 7); //удалить
-        strBuildLine.deleteCharAt(4); //удалить 1 символ
-        strBuildLine.insert(3, "BYE"); //вставить в середину
-        strBuildLine.reverse();
-        String lineFromSB = strBuildLine.toString();
-        System.out.println(strBuildLine);
+        // StringBuilder strBuildLine = new StringBuilder("Hello world!");
+        // strBuildLine.append("This is end of line!"); //добавить в конец
+        // strBuildLine.delete(4, 7); //удалить
+        // strBuildLine.deleteCharAt(4); //удалить 1 символ
+        // strBuildLine.insert(3, "BYE"); //вставить в середину
+        // strBuildLine.reverse();
+        // String lineFromSB = strBuildLine.toString();
+        // System.out.println(strBuildLine);
+//
+        // //StringBuffer используется в многопоточной среде
+        // StringBuffer strBuffLine = new StringBuffer("Hello world!");
 
-        //StringBuffer используется в многопоточной среде
-        StringBuffer strBuffLine = new StringBuffer("Hello world!");
+        String line2 = "Hello, world!";
+        line2 = line2.replace(",", "");
+        System.out.println(line2);
     }
 }
