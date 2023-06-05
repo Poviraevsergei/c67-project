@@ -1,5 +1,7 @@
 package lesson_12;
 
+import java.util.Arrays;
+import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -33,12 +35,22 @@ public class Main {
         //Pattern pattern = Pattern.compile("^null$"); task 4
         //Pattern pattern = Pattern.compile("\n+"); task 5
         //Pattern pattern = Pattern.compile("\n+"); task 5
-        Pattern pattern = Pattern.compile("[А-Я][а-я]+ [А-Я][а-я]+");
+/*        Pattern pattern = Pattern.compile("[А-Я][а-я]+ [А-Я][а-я]+");
 
         Matcher matcher = pattern.matcher(testLine);
         while (matcher.find()) {
             System.out.println(matcher.end());
+        }*/
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите строку:");
+        String str = scanner.nextLine();
+        String[] words = str.split(" +");
+        System.out.println(Arrays.toString(words));
+        for (String word : words) {
+            if (word.matches("[А-Я]{2,6}")){
+                //как добавить что бы запятую не читало?
+                System.out.println(word);
+            }
         }
-
     }
 }
