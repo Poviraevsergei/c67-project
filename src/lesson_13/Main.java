@@ -3,7 +3,7 @@ package lesson_13;
 import lesson_9.A;
 
 public class Main {
-    public static void main(String[] args) throws AgeException {
+    public static void main(String[] args) {
 /*        //подключаемся к бд
         //try-catch
         int number = 0;
@@ -38,6 +38,6 @@ public class Main {
         //после 18 лет в методе main.
 
 
-            Person person = new Person(19);
+        Person person = new Person(17);
     }
 }

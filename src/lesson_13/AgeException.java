@@ -1,6 +1,6 @@
 package lesson_13;
 
-public class AgeException extends RuntimeException {
+public class AgeException extends Exception {
 
     private int age;
 
