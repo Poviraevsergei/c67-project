@@ -1,4 +1,4 @@
 package lesson_15;
 
-public class Person {
+public class Person <E> {
 }
