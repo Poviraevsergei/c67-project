@@ -1,6 +1,7 @@
 package lesson_18.done;
 
 import java.util.ArrayList;
+import java.util.stream.Stream;
 
 public class Task1 {
     public static void main(String[] args) {
